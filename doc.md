@@ -27,17 +27,19 @@ Power automate captura essa resposta
 # REGEX
 
 - DATAS
-datas = re.findall(r'\d{2}/\d{2}/\d{4}/', text)
-\d{2} + / = dois digitos de data separando por /
-\d{4} = Quatro digitos de data  
 
-- VALORES MONETÁRIOS
-values = re.findall(r'\d(R?$?\:USD?usd?\$?\:BRL?)\s?\d{1,5}(?:\.\d{2})*,?\d{2}', text)
-R?\$?: pode começar com "R" e/ou "$" — ou seja, "R$", "R", "$" ou nada
-\s?: espaço opcional
-\d{1,3}: de 1 a 3 dígitos no começo (ex: "1", "99", "999")
-(?:\.\d{3})*: grupos opcionais de ponto + 3 dígitos (ex: ".000", ".100")
-(?:...) é um grupo de não captura (não salva esse trecho separadamente)
-,?\d{2}: vírgula opcional + dois dígitos (ex: ",00")
+    EXEMPLOS DE COMPARAÇÃO DOS 3 BLOCOS : 
 
-values = re.findall(r'\R{4}/\d{4})
+    DATA EXTRAÍDA	                EM QUAL BLOCO ELE INTERPRETA ?
+                    
+    10/09/2024	                    BLOCO 1
+
+    September 10, 2024	            BLOCO 2
+
+    10 September 2024	            BLOCO 3
+
+    September 2024	                BLOCO 2️
+
+    10, September, 2024	            BLOCO 3️
+
+    March 2025	                    BLOCO 2️
