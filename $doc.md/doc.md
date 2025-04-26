@@ -43,3 +43,25 @@ Power automate captura essa resposta
     10, September, 2024	            BLOCO 3️
 
     March 2025	                    BLOCO 2️
+
+
+
+# ------------------------------------------------------COMEÇAR DOCUMENTAÇÃO DE LEITOR DE DOCUMENTOS FISCAIS INTELIGENTE AQUI :
+
+read_pdf_text(pdf_path) → Lê o texto completo do PDF. (Aqui ainda não faz Regex, só lê.)
+
+extract_block_data(extracted_data) → Aqui sim que o Regex é aplicado no texto extraído.
+
+No final, o invoice_id, datas e values vêm dos findall() que você criou nos padrões de Regex.
+
+Então tecnicamente, o que "aciona o Regex" mesmo é quando você chama a função:
+
+python
+Copiar
+Editar
+invoice_id, datas, values = extract_block_data(extracted_data)
+e não exatamente o read_pdf_text.
+O read_pdf_text só prepara o texto.
+
+Quer que eu também ajuste seu código corrigindo uns pequenos detalhes que achei? (tipo o invoice que tá errado e falta no document_id?) 🚀
+Te mando já pronto se quiser!
