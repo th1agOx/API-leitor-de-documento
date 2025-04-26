@@ -70,15 +70,36 @@ pip install -r doc/requisitos.txt
 
 python app.py
 
-## Arquivo PDF contendo informações como:
+## 📥 Exemplo de Entrada (PDF)
+Arquivo PDF contendo informações como:
 
 Nota Fiscal: AB-12345
 Data de Emissão: 25/04/2025
 Valor: R$ 1.250,00
 
-## Exemplo de Saída :
-
-rquivo documentacao_AP.xlsx preenchido automaticamente com:
+## 📤 Exemplo de Saída
+Arquivo documentacao_AP.xlsx preenchido automaticamente com:
 
 Número do Documento	Data de Emissão	Valor
 AB-12345	25/04/2025	1250,00
+
+## 🔎 Sobre a Documentação
+Cada função e módulo contém:
+
+Docstring explicativa
+
+Tipagem explícita dos parâmetros e retornos
+
+Comentários técnicos para pontos-chave do processo
+
+Exemplos práticos em test_extract_data.py
+
+## 📋 BackLog
+As tarefas estão divididas de acordo com o módulo responsável (API principal, extração, estruturação).
+
+Cada feature é documentada no backlog para rastreamento de progresso (parte de RPA).
+
+A integração visa suportar automações robustas e confiáveis.
+
+## 📣 Observação Final
+Este projeto é parte de uma iniciativa para otimizar fluxos documentais e consolidar boas práticas de extração de dados via pipelines automatizados, sendo uma base sólida para integrações futuras com APIs REST ou bots de automação.
